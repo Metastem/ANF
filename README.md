@@ -1,4 +1,4 @@
-# Azisky 网络力量（ANF）
+# Metastem 网络空间部队（ANF）
 
 该脚本运行于 **Linux 系统**。  
 `anf/server/` 目录为 **Windows 用户**准备，但运行需要配合一个**网页包发送服务器（Web Package Sender Server）**。
